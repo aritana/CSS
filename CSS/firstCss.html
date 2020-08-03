@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First CSS example</title>
+    <style>
+        body{
+            background-color: lightblue;
+            font-size: 15px;
+        }
+        h1{
+            color: white;
+            text-align:center;
+        }
+      /**  *{
+            text-align: center;
+            color:blueviolet
+        }**/
+        h5,h6{
+            text-align: center;
+            color:red;
+        }       
+        p{
+            font-family: verdana;
+            font-size:12px;
+            color:tomato;
+            text-align :center;
+
+        }
+        ul{
+            font-family: verdana;
+            font-size:12px;
+            color: blue;
+        }
+        #para1{
+            text-align: center;
+            color: red;
+        }
+        .center{ 
+                    text-align: center;
+                    color:red;
+        }
+
+
+    </style>
+</head>
+
+<body>
+  <h1>My First CSS Example</h1>
+  <p> This is a paragraph.
+    <pre>
+        A CSS rule-set consist of a selector and a declaration block:
+        <code>
+            body{ //seletor
+                background-color: //property
+                lightblue; //value
+            }
+        </code>
+       <img src = "../img/selector.gif" alt = "CSS rule">
+
+    </pre>
+ 
+  </p>
+   <hr>
+   <h2>CSS Selectors </h2>
+   <p>       
+       We can divide CSS selectors into five categories
+       <ul>
+           <li>Simple Selectors(select elements based on name, id, class)</li>
+           <li>Combinator Selectors (Select elements based on a specific relationship between then)</li>
+           <li>Pseudo-class selectors (select and style a part of an element)</li>
+           <li>Pseudo-elements selectors (select elements based on an atrribute or attribute value)</li>
+        </ul>
+   </p>
+   <p>
+        <h2>The CSS Element Selector</h2>
+        The element selector selects HTML elements based on the element name.
+        <h3>Example</h3>
+        Here, all &lt;p&gt; elements on the page will be center-aligned, with a red
+        text color:
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;style&gt;
+                            p {
+                            text-align: center;
+                            color: red;
+                            } 
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+
+                        &lt;p&gt;Every paragraph will be affected by the style.&lt;/p&gt;
+                        &lt;p id="para1"&gt;Me too!&lt;/p&gt;
+                        &lt;p&gt;And me!&lt;/p&gt;
+
+                    &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+   </p>
+   <p>
+       <h2>The CSS id Select</h2>
+       The id selector uses the id attribute of an HTML element to select a specific element.
+       <br><br>
+       The id of an element is unique within a page, so the id selector is used to select one unique element!
+       <br><br>
+       To select an element with a specific id, write a hash (#) character, followed by the id of the element. 
+       A id name cannot start with a number.
+        <h3>Example</h3>
+        The CSS rule below will be applied to HTML element with id = "para1".
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                &lt;style&gt;
+                #para1 {
+                  text-align: center;
+                  color: red;
+                }
+                &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                
+                &lt;p id="para1"&gt;Hello World!&lt;/p&gt;
+                &lt;p&gt;This paragraph is not affected by the style.&lt;/p&gt;
+                
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+    </p>
+    <p id = "para1">Hello World!, this paragraph is affected by the style for id = #para1</p>
+    <p>
+        <h2> The CSS class Selector</h2>
+        The class selector selects HTML elements with a specific class atribute.<br><br>
+        To select elements with a specific classe, write a period (.)character, followed by the class name.
+        A class name cannot start with a number!
+        <h3>Example</h3>
+        In this example all HTML elements with classe = "center" will be red
+        and center-aligned:
+
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                &lt;style&gt;
+                .center {
+                  text-align: center;
+                  color: red;
+                }
+                &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                &lt;h1 class="center"&gt;Red and center-aligned heading&lt;/h1&gt;
+                &lt;p class="center"&gt;Red and center-aligned paragraph.&lt;/p&gt; 
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <h1 class = "center">Read and center aligned heading h1</h1>
+        <p class = "center"> Read and center aligned paragraph</p>
+        <p>
+        <h2>The CSS Universal Selector</h2>
+        The universal selector (*) selects all HTML elements on the page.
+        The CSS rule bellow will affect every HTML element on the page:
+        <pre>
+            <code>
+                * {
+                    text-align: center;
+                    color: blue;
+                  }
+            </code>
+        </pre>
+        </p>
+        <p>
+            <h2>The CSS Grouping Selector</h2>
+            The grouping selector selects all the HTML elements with the same style definitions.
+            <br><br>
+            Look at the following CSS code ( the h1, h2, and p elements have the same
+            style definitions)
+
+            <pre>
+                <code>
+                    h5 {
+                        text-align: center;
+                        color: red;
+                      }
+                      
+                      h6 {
+                        text-align: center;
+                        color: red;
+                      }
+                      
+                   
+                </code>
+            </pre>
+            It will be better to group the selector, to minimize the code.
+            To group selectors, separate each selector with a comma.
+            <pre>
+                <code>
+                    h5, h6 {
+                        text-align: center;
+                        color: red;
+                      } 
+                </code>
+            </pre>
+            <h5> h5 heading!</h5>
+            <h6> h6 heading!</h6>
+        </p>
+
+
+</body>
+
+
+</html>
